@@ -606,10 +606,13 @@ contract Bridge {
             if (
                 transactions[i].state == 2 &&
                 block.timestamp > transactions[i].timeDetails.txEndTime &&
-                transactions[i].arbitration
+                transactions[i].arbitration &&
+                transactions[i].arbDetails.arbOutcome == 0
             ) {
                 if (
-                    transactions[i].from == _user || transactions[i].to == _user
+                    transactions[i].from == _user ||
+                    transactions[i].to == _user ||
+                    isArbiterForTransaction(transactions[i].ID, _user)
                 ) {
                     pendingTransactionslistLength++;
                 }
@@ -625,10 +628,13 @@ contract Bridge {
             if (
                 transactions[i].state == 2 &&
                 block.timestamp > transactions[i].timeDetails.txEndTime &&
-                transactions[i].arbitration
+                transactions[i].arbitration &&
+                transactions[i].arbDetails.arbOutcome == 0
             ) {
                 if (
-                    transactions[i].from == _user || transactions[i].to == _user
+                    transactions[i].from == _user ||
+                    transactions[i].to == _user ||
+                    isArbiterForTransaction(transactions[i].ID, _user)
                 ) {
                     pendingTransactions[indexCounter] = transactions[i];
                     indexCounter++;
