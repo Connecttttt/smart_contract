@@ -7,10 +7,10 @@ To learn more please watch the video demo here -
 
 # Links
 
-Link to video demo -
-Link to live application -
-Link to smart contracts -
-Link to Frontend Code -
+Link to video demo - https://youtu.be/9KsYdjZs_Mo
+Link to live application - https://graceful-sprite-c51733.netlify.app/
+Link to smart contracts - https://github.com/Connecttttt/smart_contract
+Link to Frontend Code - https://github.com/Connecttttt/frontend
 
 # Side Note
 
